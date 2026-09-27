@@ -1,0 +1,33 @@
+simulation:
+  duration_ms: 20.0
+  slot_duration_ms: 0.25
+  seed: 42
+
+radio:
+  num_subchannels: 4
+  resource_width_subchannels: 1
+
+traffic:
+  kind: periodic
+  period_ms: 2.0
+  jitter_ms: 0.0
+  packet_size_bytes: 64
+  deadline_ms: 3.0
+
+scenario:
+  num_robots: 2
+
+selector:
+  policy: random
+  processing_delay_ms: 0.0
+  mode2:
+    sensing_window_ms: 100.0
+    t1_ms: 0.0
+    t2_ms: 2.0
+    reservation_interval_ms: 2.0
+    reselection_counter_min: 5
+    reselection_counter_max: 15
+    keep_probability: 0.5
+    minimum_candidate_fraction: 0.2
+    initial_evidence_threshold: 0
+
